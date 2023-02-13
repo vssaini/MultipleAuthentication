@@ -3,7 +3,7 @@
 
 - Follow article https://dotnetplaybook.com/secure-a-net-core-api-using-bearer-authentication/ as it is
 - For authorization we have used client_credential 
-- The following is the C# code snipper from Postman
+- The following is the C# code snippet from Postman
 
 var client = new RestClient("https://login.microsoftonline.com/b945d629-94d4-40a3-a7bc-aa82c00329f6/oauth2/v2.0/token");
 client.Timeout = -1;

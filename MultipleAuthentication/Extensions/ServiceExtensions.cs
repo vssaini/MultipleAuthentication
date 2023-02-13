@@ -105,8 +105,8 @@ namespace MultipleAuthentication.Extensions
             {
                 options.AddDefaultPolicy();
                 options.AddCookiePolicy();
-                options.AddAzureAdPolicy();
-                options.AddAwsPolicy();
+                options.AddAzureADPolicy();
+                options.AddAWSPolicy();
             });
         }
 
@@ -129,7 +129,7 @@ namespace MultipleAuthentication.Extensions
                 .Build());
         }
 
-        private static void AddAzureAdPolicy(this AuthorizationOptions options)
+        private static void AddAzureADPolicy(this AuthorizationOptions options)
         {
             var azureAdPolicyBuilder = new AuthorizationPolicyBuilder("AzureADScheme");
             options.AddPolicy("OnlyAzureADUser", azureAdPolicyBuilder
@@ -137,7 +137,7 @@ namespace MultipleAuthentication.Extensions
                 .Build());
         }
 
-        private static void AddAwsPolicy(this AuthorizationOptions options)
+        private static void AddAWSPolicy(this AuthorizationOptions options)
         {
             var awsPolicyBuilder = new AuthorizationPolicyBuilder("AWSScheme");
             options.AddPolicy("OnlyAWSUser", awsPolicyBuilder
